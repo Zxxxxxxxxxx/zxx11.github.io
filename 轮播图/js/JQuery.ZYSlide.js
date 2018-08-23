@@ -33,7 +33,7 @@
         function move(){
             lis.each(function(index,item){
                 var state=states[index];
-                $(item).css('z-index',state.ZIndex).finish().animate(state,setting.delay).find('img').css('opactiy',state.opac);
+                $(item).css('z-index',state.ZIndex).finish().animate(state,setting.delay).find('img').css('opacity',state.opac);
             })
         }
         move();
@@ -74,6 +74,8 @@
       $(this).each(function(i,ele){
         slide(ele,options);
       })
+    //   支持链式调用
+      return this;
     }
 
 })(jQuery)

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,38 +8,77 @@
     <title>轮播图</title>
     <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
-   
-        <div class="box">
-                <section class="slide-prev">前一张</section>
-                <section class="slide-next">下一张</section>
-                <ul>
-                    <li><img src="images/1.jpg" alt="轮播图片"></li>
-                    <li><img src="images/2.jpg" alt="轮播图片"></li>
-                    <li><img src="images/3.jpg" alt="轮播图片"></li>
-                    <li><img src="images/4.jpg" alt="轮播图片"></li>
-                    <li><img src="images/5.jpg" alt="轮播图片"></li>
-                    <li><img src="images/6.jpg" alt="轮播图片"></li>
-                    <li><img src="images/7.jpg" alt="轮播图片"></li>
-                </ul>
-            </div>
-    <div class="box">
-            <section class="slide-prev">前一张</section>
-            <section class="slide-next">下一张</section>
-            <ul>
-                <li><img src="images/1.jpg" alt="轮播图片"></li>
-                <li><img src="images/2.jpg" alt="轮播图片"></li>
-                <li><img src="images/3.jpg" alt="轮播图片"></li>
-                <li><img src="images/4.jpg" alt="轮播图片"></li>
-                <li><img src="images/5.jpg" alt="轮播图片"></li>
-                <li><img src="images/6.jpg" alt="轮播图片"></li>
-                <li><img src="images/7.jpg" alt="轮播图片"></li>
-            </ul>
-        </div>
+
+    <div class="box one">
+        <section class="slide-prev">前一张</section>
+        <section class="slide-next">下一张</section>
+        <ul>
+            <li>
+                <img src="images/1.jpg" alt="轮播图片">
+            </li>
+            <li>
+                <img src="images/2.jpg" alt="轮播图片">
+            </li>
+            <li>
+                <img src="images/3.jpg" alt="轮播图片">
+            </li>
+            <li>
+                <img src="images/4.jpg" alt="轮播图片">
+            </li>
+            <li>
+                <img src="images/5.jpg" alt="轮播图片">
+            </li>
+            <li>
+                <img src="images/6.jpg" alt="轮播图片">
+            </li>
+            <li>
+                <img src="images/7.jpg" alt="轮播图片">
+            </li>
+        </ul>
+    </div>
+    <div class="box" id="two">
+        <section class="slide-prev">前一张</section>
+        <section class="slide-next">下一张</section>
+        <ul>
+            <li>
+                <img src="images/1.jpg" alt="轮播图片">
+            </li>
+            <li>
+                <img src="images/2.jpg" alt="轮播图片">
+            </li>
+            <li>
+                <img src="images/3.jpg" alt="轮播图片">
+            </li>
+            <li>
+                <img src="images/4.jpg" alt="轮播图片">
+            </li>
+            <li>
+                <img src="images/5.jpg" alt="轮播图片">
+            </li>
+            <li>
+                <img src="images/6.jpg" alt="轮播图片">
+            </li>
+            <li>
+                <img src="images/7.jpg" alt="轮播图片">
+            </li>
+        </ul>
+    </div>
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/JQuery.ZYSlide.js"></script>
     <script>
-        $('.box').ZYSlide({speed:1000});
+        // 将$禁用
+        jQuery.noConflict();
+        // jQuery('.box').ZYSlide({speed:1000})
+        // $('.box').ZYSlide({
+        //     speed: 1000
+        // }).css('background-color','red');
+
+        // 两个不同的轮播
+            jQuery('.one').ZYSlide({delay:2000,speed:3000}).css('background-color','red');
+            jQuery('#two').ZYSlide({speed:1000,}).css('background-color','skyblue')
     </script>
 </body>
+
 </html>
